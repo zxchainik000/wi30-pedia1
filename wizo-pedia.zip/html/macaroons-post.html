@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Смотрите-макароны ха-ха-ха | WI30-педия</title>
+    <style>
+    :root {
+        --bg-main: #0f0e17;
+        --text-main: #f2f2f2;
+        --accent-1: #ff8906;
+        --accent-2: #e53170;
+        --accent-3: #25d0ab;
+        --link-color: #85d1ff;
+        --border-crazy: 2px dashed var(--accent-1);
+    }
+
+    body {
+        font-family: 'Comic Sans MS', cursive;
+        background-color: var(--bg-main);
+        color: var(--text-main);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        border-left: 5px solid var(--accent-2);
+        border-right: 5px solid var(--accent-3);
+        line-height: 1.6;
+    }
+
+    .header-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .header-logo:hover {
+        opacity: 0.8;
+    }
+
+    .logo-img {
+        width: 80px;
+        height: auto;
+    }
+
+    .logo-text {
+        font-size: 48px;
+        font-weight: bold;
+        color: var(--accent-3);
+        text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+    }
+
+    h1 {
+        color: var(--accent-2);
+        text-shadow: 0 0 10px var(--accent-3);
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        border-bottom: 3px dashed var(--accent-1);
+        padding-bottom: 15px;
+    }
+
+    em {
+        display: block;
+        text-align: center;
+        font-size: 1.1em;
+        color: #aaa;
+        margin: 20px 0;
+    }
+
+    .pasta-image {
+        display: block;
+        max-width: 300px;
+        margin: 30px auto;
+        border: var(--border-crazy);
+        border-radius: 5px;
+        box-shadow: 0 0 20px rgba(255, 137, 6, 0.5);
+        animation: pastaGlow 3s infinite alternate;
+    }
+
+    .comments {
+        margin: 40px 0;
+        padding: 20px;
+        background: rgba(15, 14, 23, 0.5);
+        border: var(--border-crazy);
+    }
+
+    .comments h3 {
+        color: var(--accent-1);
+        text-align: center;
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .comment {
+        margin: 15px 0;
+        padding: 15px;
+        border-left: 3px solid var(--accent-3);
+        background: rgba(37, 208, 171, 0.1);
+        transition: all 0.3s;
+    }
+
+    .comment:hover {
+        background: rgba(37, 208, 171, 0.3);
+        transform: translateX(5px);
+    }
+
+    .comment strong {
+        color: var(--accent-1);
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 0.9em;
+        color: #777;
+        padding: 15px;
+        background: rgba(229, 49, 112, 0.1);
+        border-left: 3px solid var(--accent-2);
+    }
+
+    @keyframes pastaGlow {
+        0% { box-shadow: 0 0 10px var(--accent-1); }
+        50% { box-shadow: 0 0 20px var(--accent-3); }
+        100% { box-shadow: 0 0 10px var(--accent-2); }
+    }
+
+    /* Анимация для комментариев */
+    .comment:nth-child(odd) {
+        animation: commentFloat 4s ease-in-out infinite;
+    }
+
+    .comment:nth-child(even) {
+        animation: commentFloat 5s ease-in-out infinite;
+    }
+
+    @keyframes commentFloat {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+</style>
+</head>
+<body>
+    <a href="index.html" class="header-logo">
+        <img src="WI30pedia ico.png" alt="WI30-педия" class="logo-img">
+        <span class="logo-text">WI30-педия</span>
+    </a>
+
+    <h1>СМОТРИТЕ-МАКАРОНЫ ХА-ХА-ХА</h1>
+    
+    <img src="pasta-pack.png" alt="Пачка макарон" class="pasta-image">
+    
+    <p><em>Статья написана ящиком кухонного шкафа, который нашёл это "невероятно смешным"</em></p>
+    
+    <div class="comments">
+        <h3>Комментарии:</h3>
+        
+        <div class="comment">
+            <strong>Микроволновка:</strong> "Я... даже не знаю, что сказать. Они же даже не нагреваются."
+        </div>
+        
+        <div class="comment">
+            <strong>Холодильник:</strong> "Я хранил это 3 месяца, и вот ради чего?.."
+        </div>
+        
+        <div class="comment">
+            <strong>Пылесос:</strong> "Если бы это были рассыпанные макароны, я бы ещё понял..."
+        </div>
+        
+        <div class="comment">
+            <strong>Тостер:</strong> "А где хлеб? Почему нет статьи про хлеб?!"
+        </div>
+        
+        <div class="comment">
+            <strong>Розетка:</strong> "Я передам это дальше по проводам. Пусть электрики тоже посмеются."
+        </div>
+    </div>
+    
+    <div class="footer">
+        ⚠ WI30-педия не несёт ответственности за:<br>
+        - Внезапные приступы смеха у кухонной утвари<br>
+        - Попытки других продуктов потребовать свои статьи<br>
+        - Возможное разочарование макарон в себе
+    </div>
+</body>
+</html>

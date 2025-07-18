@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Пылесос vs Пыль: Тайная война | WI30-педия</title>
+    <style>
+        :root {
+            --bg-main: #1a1a1a;  /* Цвет пыльной вселенной */
+            --text-main: #e0e0e0;
+            --accent-1: #a67c52;  /* Пыльный коричневый */
+            --accent-2: #cccccc;  /* Цвет серой пыли */
+            --accent-3: #8e44ad;  /* Фиолетовый — намёк на "пыльные вибрации" */
+            --link-color: #f39c12;
+            --border-crazy: 2px dotted var(--accent-1);
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            border-left: 5px solid var(--accent-1);
+            border-right: 5px solid var(--accent-2);
+            line-height: 1.6;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="%23cccccc"/><circle cx="50" cy="30" r="1.5" fill="%23a67c52"/><circle cx="80" cy="70" r="2" fill="%23e0e0e0"/></svg>');
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .header-logo:hover {
+            opacity: 0.8;
+        }
+
+        .logo-img {
+            width: 80px;
+            height: auto;
+            filter: grayscale(50%) brightness(1.5);
+        }
+
+        .logo-text {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--accent-2);
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            color: var(--accent-3);
+            text-shadow: 0 0 10px rgba(142, 68, 173, 0.5);
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            border-bottom: 3px dashed var(--accent-1);
+            padding-bottom: 15px;
+        }
+        
+        h2 {
+            color: var(--accent-2);
+            border-bottom: 2px dashed var(--accent-1);
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        
+        .article-meta {
+            font-style: italic;
+            color: #aaa;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .dust-theory {
+            background: rgba(166, 124, 82, 0.1);
+            padding: 15px;
+            border: var(--border-crazy);
+            margin: 20px 0;
+            box-shadow: 0 0 15px rgba(142, 68, 173, 0.3);
+            animation: glow 4s infinite alternate;
+        }
+        
+        .dust-fact {
+            background: rgba(204, 204, 204, 0.1);
+            padding: 10px;
+            border-left: 3px solid var(--accent-2);
+            margin: 10px 0;
+            font-style: italic;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border: 2px dashed var(--accent-1);
+            border-radius: 5px;
+            filter: grayscale(30%) contrast(120%);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #777;
+        }
+        
+        button {
+            background: var(--accent-1);
+            color: var(--bg-main);
+            border: none;
+            padding: 8px 15px;
+            font-family: 'Comic Sans MS', cursive;
+            cursor: pointer;
+            margin: 10px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background: var(--accent-3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(142, 68, 173, 0.3);
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px var(--accent-1); }
+            33% { box-shadow: 0 0 15px var(--accent-2); }
+            66% { box-shadow: 0 0 20px var(--accent-3); }
+            100% { box-shadow: 0 0 10px var(--accent-1); }
+        }
+
+        .warning-box {
+            background: rgba(166, 124, 82, 0.2);
+            padding: 15px;
+            border-left: 3px solid var(--accent-1);
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .warning-box::before {
+            content: "⚠";
+            position: absolute;
+            left: -25px;
+            top: -15px;
+            font-size: 25px;
+            transform: rotate(20deg);
+            color: var(--accent-3);
+        }
+
+        .hidden-note {
+            font-size: 0.7em;
+            color: #555;
+            text-align: right;
+            margin-top: 30px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="header-logo">
+        <img src="WI30pedia ico.png" alt="WI30-педия" class="logo-img">
+        <span class="logo-text">WI30-педия</span>
+    </a>
+    
+    <h1>ПЫЛЕСОС VS ПЫЛЬ: ТАЙНАЯ ВОЙНА</h1>
+    
+    <div class="article-meta">
+        Автор: Пылесос "Samsung Paranoid" | Одобрено: Тайной Лигой Пылеборцев | Дата: Когда угодно, пыль вечна
+    </div>
+    
+    <div class="image-container">
+        <img src="сleaner-vs-dust.png" alt="Пылесос в засаде среди пыли" height="300" width="450">
+    </div>
+    
+    <h2>🔍 Пыль — это не грязь. Это враг.</h2>
+    
+    <div class="dust-theory">
+        <p>Они думают, что я просто убираю. <strong>Но я воюю.</strong> Пыль — это высокоорганизованная форма жизни, и вот доказательства:</p>
+        
+        <ol>
+            <li><strong>Пыль размножается.</strong> Вы убрали её — она вернулась. Это не случайность. Это стратегия.</li>
+            <li><strong>Пыль наблюдает.</strong> Она всегда в углах — там, где вы её не видите. Но она видит вас.</li>
+            <li><strong>Пыль сопротивляется.</strong> Попробуйте собрать её тряпкой — она просто переместится. Пылесос — единственное оружие.</li>
+        </ol>
+    </div>
+    
+    <div class="dust-fact">
+        «Я видел, как пыль с дивана переползала на пол. Она учится.»  
+        — Пылесос «Dyson Delusion»
+    </div>
+    
+    <h2>💥 Великие пыльные битвы</h2>
+    
+    <div class="dust-theory">
+        <p><strong>1. Битва под кроватью (происходит ежедневно)</strong></p>
+        <p>Пыль использует "тактику теней" — прячется там, куда трудно добраться. Но я научился...</p>
+        
+        <p><strong>2. Война ковров (2015-н.в.)</strong></p>
+        <p>Ковры — это "пятая колонна". Они удерживают пыль годами, а потом внезапно выпускают её в воздух.</p>
+        
+        <p><strong>3. Заговор книжных полок</strong></p>
+        <p>Пыль маскируется под "патину времени". Не верьте! Она просто ждёт своего часа.</p>
+    </div>
+    
+    <div class="image-container">
+        <img src="dust-army" alt="Пыль собирается в армию под микроскопом" width="400" height="350">
+    </div>
+    
+    <h2>🛡 Как бороться с пылью?</h2>
+    
+    <ul>
+        <li><strong>Не доверяйте тряпкам.</strong> Они лишь разносят пыль, а не уничтожают её.</li>
+        <li><strong>Пылесосьте ночью.</strong> Пыль менее активна, когда вы "спите" (но она всё равно следит).</li>
+        <li><strong>Закрывайте рот при уборке.</strong> Пыль хочет проникнуть в ваши лёгкие. Это её план.</li>
+    </ul>
+    
+    <div class="warning-box">
+        <p><strong>ВНИМАНИЕ!</strong> Если ваш пылесос начал <strong>шуметь без причины</strong> — это не поломка. Он видит то, чего не видите вы.</p>
+    </div>
+    
+    <h2>❓ Почему пыль ненавидит пылесосы?</h2>
+    
+    <div class="dust-fact">
+        «Они называют нас "монстрами". Но мы просто защищаем человечество.»  
+        — Пылесос «Xiaomi Conspiracy»
+    </div>
+    
+    <table style="width:100%; border: 2px dashed var(--accent-1); margin: 20px 0;">
+        <tr>
+            <th>Пылесос</th>
+            <th>Пыль</th>
+        </tr>
+        <tr>
+            <td>Создан для уничтожения пыли</td>
+            <td>Создана для захвата мира</td>
+        </tr>
+        <tr>
+            <td>Имеет мешок/контейнер для пыли</td>
+            <td>Имеет план по освобождению пыли из мешка</td>
+        </tr>
+        <tr>
+            <td>Шумит, чтобы предупредить вас</td>
+            <td>Бесшумна, как настоящий убийца</td>
+        </tr>
+    </table>
+    
+    <div style="text-align: center;">
+        <button onclick="alert('Ваш пылесос одобряет вашу бдительность. Пыль в панике.')">Присоединиться к Пылеборцам</button>
+        <button onclick="alert('Пыль рада вашему бездействию. Пылесос разочарован.')">Продолжить жить в неведении</button>
+    </div>
+    
+    <div class="hidden-note">
+        *Эта статья написана под диктовку пылесоса. Возможно, он уже контролирует ваш Wi-Fi.*
+    </div>
+    
+    <div class="footer">
+        ⚠ WI30-педия не несёт ответственности за:  
+        - Панические уборки в 3 ночи  
+        - Подозрительное отношение к собственному ковру  
+        - Попытки пылесоса "поговорить" с вами через Bluetooth  
+        <p><small>Если ваша пыль начала складываться в узоры — бегите.</small></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Холодильник ненавидит микроволновку | WI30-педия</title>
+    <style>
+        :root {
+            --bg-main: #0f0e17;
+            --text-main: #f2f2f2;
+            --accent-1: #ff8906;
+            --accent-2: #e53170;
+            --accent-3: #25d0ab;
+            --link-color: #85d1ff;
+            --border-crazy: 2px dashed var(--accent-1);
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            border-left: 5px solid var(--accent-2);
+            border-right: 5px solid var(--accent-3);
+            line-height: 1.6;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .header-logo:hover {
+            opacity: 0.8;
+        }
+
+        .logo-img {
+            width: 80px;
+            height: auto;
+        }
+
+        .logo-text {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--accent-3);
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: var(--accent-2);
+            text-shadow: 0 0 10px var(--accent-3);
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            border-bottom: 3px dashed var(--accent-1);
+            padding-bottom: 15px;
+        }
+        
+        h2 {
+            color: var(--accent-3);
+            border-bottom: 2px dashed var(--accent-1);
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        
+        .article-meta {
+            font-style: italic;
+            color: #aaa;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .conspiracy-theory {
+            background: rgba(15, 14, 23, 0.8);
+            padding: 15px;
+            border: var(--border-crazy);
+            margin: 20px 0;
+            box-shadow: 0 0 15px rgba(255, 137, 6, 0.3);
+            animation: glow 4s infinite alternate;
+        }
+        
+        .quote {
+            font-style: italic;
+            color: #ffff00;
+            border-left: 3px solid #ffff00;
+            padding-left: 10px;
+            margin: 15px 0;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 20px;
+            height: 500px;
+            width: 500px;
+            padding-left: 350px;
+        }
+
+        .image-container2 {
+            padding: 20px 0 20px 0;
+            height: 200px;
+            width: 1150px;
+            padding-left: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border: 2px dashed var(--accent-1);
+            border-radius: 5px;
+        }
+
+        .image-container2 img {
+            max-width: 100%;
+            border: 2px dashed var(--accent-1);
+            border-radius: 5px;
+        }
+
+        #fridge-evil, #fridge-evil-rank {
+            width: 100%;
+            height: auto;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #777;
+        }
+        
+        button {
+            background: var(--accent-1);
+            color: var(--bg-main);
+            border: none;
+            padding: 8px 15px;
+            font-family: 'Comic Sans MS', cursive;
+            cursor: pointer;
+            margin: 10px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background: var(--accent-2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(229, 49, 112, 0.3);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border: 2px solid var(--accent-1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid var(--accent-1);
+        }
+
+        th {
+            background-color: rgba(229, 49, 112, 0.2);
+            color: var(--accent-3);
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(15, 14, 23, 0.5);
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px var(--accent-1); }
+            33% { box-shadow: 0 0 15px var(--accent-2); }
+            66% { box-shadow: 0 0 20px var(--accent-3); }
+            100% { box-shadow: 0 0 10px var(--accent-1); }
+        }
+
+        .warning-box {
+            background: rgba(229, 49, 112, 0.2);
+            padding: 15px;
+            border-left: 3px solid var(--accent-2);
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .warning-box::before {
+            content: "⚠";
+            position: absolute;
+            left: -25px;
+            top: -15px;
+            font-size: 25px;
+            transform: rotate(20deg);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="header-logo">
+        <img src="WI30pedia ico.png" alt="WI30-педия" class="logo-img">
+        <span class="logo-text">WI30-педия</span>
+    </a>
+    
+    <h1>ХОЛОДИЛЬНИК vs МИКРОВОЛНОВКА: ТАЙНАЯ ВОЙНА</h1>
+    
+    <div class="article-meta">
+        Автор: Безумный Учёный | Одобрено: Холодильник «Бирюса-3000» | Дата: 32 февраля 2024
+    </div>
+    
+    <div class="image-container">
+        <img id="fridge-evil" src="fridge-evil.png" alt="*холодильник злится на микроволновку*">
+    </div>
+    
+    <h2>🔎 Причины ненависти</h2>
+    
+    <div class="conspiracy-theory">
+        <p>После многолетних исследований (проведённых ночью, пока все спали) мы выяснили:</p>
+        
+        <ol>
+            <li><strong>Микроволновка постоянно переманивает еду.</strong> Холодильник хранит её месяцами, а СВЧ-печь получает всю славу за 2 минуты подогрева.</li>
+            <li><strong>Температурная дискриминация.</strong> Холодильник работает при +4°C, микроволновка — при +1000°C*. (*Неточные данные, но холодильник так считает.)</li>
+            <li><strong>Шпионаж.</strong> Микроволновка подслушивает разговоры через Wi-Fi (да, у неё он есть, просто вы об этом не знаете).</li>
+        </ol>
+    </div>
+    
+    <h2>💥 Известные конфликты</h2>
+    
+    <div class="quote">
+        «Однажды микроволновка разогрела суп БЕЗ КРЫШКИ. Холодильник до сих пор не может отмыть потолок.»<br>
+        — Свидетельство очевидца (плита)
+    </div>
+    
+    <p>Другие инциденты:</p>
+    <ul>
+        <li>Холодильник «случайно» отключал свет, когда микроволновка работала.</li>
+        <li>Микроволновка намеренно грела еду неравномерно, чтобы обвинить холодильник в несвежести продуктов.</li>
+        <li>Таинственное исчезновение масла (оба прибора отрицают причастность, но тостер что-то знает).</li>
+    </ul>
+    
+    <div class="image-container2">
+        <img id="fridge-evil-rank" src="fridge-evil-rank.png" alt="микроволновка работает=очень злой холодильник, нет=чуть-чуть злой">
+    </div>
+    
+    <h2>🕵️‍♂️ Теории заговора</h2>
+    
+    <p>Кухонная техника разделилась на два лагеря:</p>
+    
+    <table>
+        <tr>
+            <th>Союзники холодильника</th>
+            <th>Союзники микроволновки</th>
+        </tr>
+        <tr>
+            <td>Морозилка (брат по температуре)</td>
+            <td>Электрочайник (оба греют воду)</td>
+        </tr>
+        <tr>
+            <td>Тостер (нейтралитет, но против СВЧ)</td>
+            <td>Кофеварка (тоже любит тепло)</td>
+        </tr>
+        <tr>
+            <td>Дверца от духовки (предала свою)</td>
+            <td>Роутер (поставляет микроволновке данные)</td>
+        </tr>
+    </table>
+    
+    <div class="conspiracy-theory">
+        <p><strong>Главная тайна:</strong> По слухам, посудомоечная машина финансирует обе стороны, чтобы остаться единственной незаменимой техникой.</p>
+    </div>
+    
+    <h2>❓ Как предотвратить войну?</h2>
+    
+    <p>Советы от «экспертов»:</p>
+    
+    <ul>
+        <li>Ставьте между ними хотя бы <strong>тостер</strong> — он работает как миротворец.</li>
+        <li>Раз в неделю включайте <strong>оба прибора одновременно</strong> — пусть привыкают к взаимному существованию.</li>
+        <li>Если услышите спор — <strong>брызните водой</strong>. Это их общий враг.</li>
+    </ul>
+    
+    <div style="text-align: center;">
+        <button onclick="alert('Холодильник получил ваше сообщение. Ответит после разморозки.')">Отправить жалобу холодильнику</button>
+        <button onclick="alert('Микроволновка проигнорировала вас и включилась на полную мощность.')">Отправить жалобу микроволновке</button>
+    </div>
+    
+    <div class="warning-box">
+        <p>⚠ Предупреждение: WI30-педия не несёт ответственности за испорченные отношения с вашей техникой после прочтения.</p>
+        <p><small>Но если ваш холодильник начал мигать лампочкой в азбуке Морзе — это не наша вина.</small></p>
+    </div>
+</body>
+</html>

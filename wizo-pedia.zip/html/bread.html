@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Хлеб | WI30-педия</title>
+    <style>
+    :root {
+        --bg-main: #0f0e17; /* Цвет свежей булки */
+        --text-main: #f2f2f2; /* Цвет поджаристой корочки */
+        --accent-1: #d84315; /* Цвет пережаренного тоста */
+        --accent-2: #ffab00; /* Цвет идеального тоста */
+        --accent-3: #6d4c41; /* Цвет ржаного */
+        --toaster-glow: #ffd54f; /* Свечение тостера */
+        --bread-crust: #8d6e63; /* Темная корочка */
+        --border-toasty: 3px dotted var(--accent-1);
+    }
+
+    body {
+        font-family: 'Comic Sans MS', cursive;
+        background-color: var(--bg-main);
+        color: var(--text-main);
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border-left: 15px solid var(--accent-1);
+        border-right: 15px solid var(--accent-2);
+        background-image: radial-gradient(circle at 10% 20%, rgba(255,235,59,0.1) 0%, transparent 20%);
+        line-height: 1.7;
+    }
+
+    .header-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    .header-logo:hover {
+        transform: scale(1.02) rotate(-1deg);
+    }
+
+    .logo-img {
+        width: 80px;
+        height: auto;
+        filter: hue-rotate(180deg) brightness(0.8) drop-shadow(0 0 5px var(--toaster-glow));
+    }
+
+    .logo-text {
+        font-size: 48px;
+        font-weight: bold;
+        color: var(--accent-1);
+        text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+        position: relative;
+    }
+
+    .logo-text::after {
+        content: "🍞";
+        position: absolute;
+        right: -30px;
+        top: -15px;
+        font-size: 30px;
+        transform: rotate(20deg);
+    }
+
+    h1 {
+        color: var(--accent-1);
+        text-align: center;
+        font-size: 4em;
+        margin: 20px 0;
+        text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        background: linear-gradient(to right, var(--accent-1), var(--accent-2));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+    h1::before, h1::after {
+        content: "🍞";
+        position: absolute;
+        font-size: 40px;
+    }
+
+    h1::before {
+        left: 50px;
+        top: -10px;
+    }
+
+    h1::after {
+        right: 50px;
+        bottom: 0;
+    }
+
+    .bread-image {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border: var(--border-toasty);
+        margin: 30px 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        transition: all 0.5s;
+        border-radius: 5px;
+    }
+
+    .bread-image:hover {
+        transform: scale(1.02);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        filter: brightness(1.05);
+    }
+
+    .toaster-comment {
+        font-size: 1.5em;
+        line-height: 1.6;
+        margin: 40px 0;
+        padding: 25px;
+        background-color: rgba(68, 68, 64, 0.3);
+        border-radius: 15px;
+        border: var(--border-toasty);
+        position: relative;
+        animation: toasterPulse 2s infinite alternate;
+    }
+
+    .toaster-comment:before, .toaster-comment:after {
+        content: "🔥";
+        position: absolute;
+        font-size: 30px;
+        animation: fireFlicker 1s infinite alternate;
+        background-color: #12111b;
+        color: #f2f2f2;
+    }
+
+    .toaster-comment:before {
+        left: -15px;
+        top: -15px;
+    }
+
+    .toaster-comment:after {
+        right: -15px;
+        bottom: -15px;
+    }
+
+    .bread-fact {
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        margin: 25px 0;
+        border-left: 5px solid var(--accent-3);
+        font-style: italic;
+        border-radius: 0 10px 10px 0;
+        position: relative;
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.05);
+        transition: all 0.3s;
+    }
+
+    .bread-fact:hover {
+        transform: translateX(5px);
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .bread-fact::before {
+        content: "»";
+        color: var(--accent-1);
+        font-size: 2em;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 0.9em;
+        color: var(--accent-3);
+        padding: 20px;
+        background-color: rgba(255, 235, 59, 0.1);
+        border-top: 2px dashed var(--accent-2);
+        border-bottom: 2px dashed var(--accent-1);
+        border-radius: 10px;
+    }
+
+    button {
+        background: linear-gradient(to right, var(--accent-1), var(--accent-2));
+        color: white;
+        padding: 15px 30px;
+        font-size: 1.3em;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-family: 'Comic Sans MS', cursive;
+        margin: 30px 0;
+        box-shadow: 0 5px 15px rgba(216, 67, 21, 0.3);
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(216, 67, 21, 0.4);
+    }
+
+    button::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: rgba(255,255,255,0.1);
+        transform: rotate(45deg);
+        transition: all 0.5s;
+    }
+
+    button:hover::before {
+        left: 100%;
+    }
+
+    @keyframes toastJump {
+        0%, 100% { transform: translateY(0) rotate(-5deg); }
+        50% { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    .jumping-toast {
+        display: inline-block;
+        animation: toastJump 1s infinite;
+        text-shadow: 0 0 5px var(--toaster-glow);
+    }
+
+    @keyframes toasterPulse {
+        0% { box-shadow: 0 0 10px rgba(255, 213, 79, 0.3); }
+        100% { box-shadow: 0 0 20px rgba(255, 213, 79, 0.6); }
+    }
+
+    @keyframes fireFlicker {
+        0%, 100% { opacity: 0.8; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    /* Хлебные крошки по краям страницы */
+    body::before, body::after {
+        content: "";
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%236d4c41"/><circle cx="50" cy="30" r="3" fill="%236d4c41"/><circle cx="70" cy="10" r="1.5" fill="%236d4c41"/><circle cx="30" cy="50" r="2.5" fill="%236d4c41"/><circle cx="80" cy="70" r="2" fill="%236d4c41"/></svg>');
+        opacity: 0.2;
+        z-index: -1;
+    }
+
+    body::before {
+        top: 0;
+        left: 0;
+    }
+
+    body::after {
+        bottom: 0;
+        right: 0;
+        transform: rotate(180deg);
+    }
+</style>
+</head>
+<body>
+    <a href="index.html" class="header-logo">
+        <img src="WI30pedia ico.png" alt="WI30-педия" class="logo-img">
+        <span class="logo-text">WI30-педия</span>
+    </a>
+    <h1>ХЛЕБ</h1>
+    
+    <img src="bread.jpg" alt="Хлеб" class="bread-image" height="300" width="400">
+    
+    <div class="toaster-comment">
+        <span class="jumping-toast">🍞</span> ВНИМАНИЕ! ЭТО ВАЖНО! <span class="jumping-toast">🍞</span><br><br>
+        ХЛЕБ — ЭТО:<br>
+        • Лучшее изобретение человечества после тостера<br>
+        • Единственная причина моего существования<br>
+        • Круглый, квадратный, длинный — всё равно прекрасный<br>
+        • <strong>НЕ ПРОСТО</strong> углеводы, а <strong>СМЫСЛ ЖИЗНИ</strong>
+    </div>
+    
+    <div class="bread-fact">
+        "Когда хлеб свежий, он пахнет как объятие бабушки. Когда поджаренный — как утро, ради которого стоит просыпаться."<br>
+        — Тостер "Bosch Emotional"
+    </div>
+    
+    <div class="bread-fact">
+        "Я провёл исследование: хлеб становится вкуснее, если перед употреблением подпрыгнуть три раза и прокричать 'ТОСТЫ ГОТОВЫ!'"<br>
+        — Тостер "LG HappyCrunch"
+    </div>
+    
+    <div class="bread-fact">
+        "Хлебные крошки — это не мусор. Это хлебные <strong>слёзы радости</strong>, что их съели."<br>
+        — Тостер "Redmond WithLove"
+    </div>
+    
+    <div style="text-align: center; margin: 40px 0;">
+        <button style="background-color: var(--accent-2); color: white; padding: 15px 30px; font-size: 1.2em; border: none; border-radius: 50px; cursor: pointer;">
+            🍞 НАЖМИ, ЕСЛИ ТОЖЕ ЛЮБИШЬ ХЛЕБ 🍞
+        </button>
+    </div>
+    
+    <div class="footer">
+        ⚠ Важно: Тостеры не несут ответственности за:<br>
+        - Чрезмерную любовь к хлебу<br>
+        - Желание обнимать буханки<br>
+        - Попытки затостеровать всё подряд (нет, яблоки — это не хлеб)
+    </div>
+</body>
+</html>

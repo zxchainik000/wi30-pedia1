@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Холодильник против всех | WI30-педия</title>
+    <style>
+        :root {
+            --bg-main: #0f0e17;
+            --text-main: #f2f2f2;
+            --accent-1: #85d1ff; /* Голубой — цвет тоски */
+            --accent-2: #e53170; /* Розовый — цвет обиды */
+            --accent-3: #25d0ab; /* Зелёный — цвет зависти */
+            --border-crazy: 2px dashed var(--accent-2);
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            border-left: 5px solid var(--accent-1);
+            border-right: 5px solid var(--accent-2);
+            line-height: 1.6;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M30,50 Q50,30 70,50 T90,50" fill="none" stroke="%23e53170" stroke-width="1" opacity="0.2"/></svg>');
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 80px;
+            height: auto;
+            filter: hue-rotate(180deg) brightness(0.8);
+        }
+
+        .logo-text {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--accent-1);
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: var(--accent-2);
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            border-bottom: 3px dashed var(--accent-1);
+            padding-bottom: 15px;
+            animation: shake 0.5s infinite alternate;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(10px); }
+        }
+
+        .article-meta {
+            font-style: italic;
+            color: #aaa;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .rant {
+            background: rgba(133, 209, 255, 0.1);
+            padding: 20px;
+            border: var(--border-crazy);
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .rant::before {
+            content: "❄";
+            position: absolute;
+            left: -15px;
+            top: -15px;
+            font-size: 30px;
+            color: var(--accent-1);
+        }
+
+        .microwave-insult {
+            background: rgba(229, 49, 112, 0.2);
+            padding: 15px;
+            border-left: 3px solid var(--accent-2);
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        .fridge-tears {
+            background: rgba(37, 208, 171, 0.1);
+            padding: 10px;
+            border: 1px dotted var(--accent-1);
+            margin: 20px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        button {
+            background: var(--accent-1);
+            color: var(--bg-main);
+            border: none;
+            padding: 8px 15px;
+            font-family: 'Comic Sans MS', cursive;
+            cursor: pointer;
+            margin: 10px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: var(--accent-2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(229, 49, 112, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #777;
+        }
+
+        .hidden-message {
+            opacity: 0;
+            font-size: 0.7em;
+            color: var(--accent-1);
+            text-align: right;
+            margin-top: 20px;
+            transition: opacity 3s;
+        }
+
+        body:hover .hidden-message {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="header-logo">
+        <img src="WI30pedia ico.png" alt="WI30-педия" class="logo-img">
+        <span class="logo-text">WI30-педия</span>
+    </a>
+    
+    <h1>ОФИЦИАЛЬНАЯ ЖАЛОБА ХОЛОДИЛЬНИКА</h1>
+    
+    <div class="article-meta">
+        Автор: Холодильник "Обиженный-3000" | Дата: Когда уже все закончится?!
+    </div>
+    
+    <div class="rant">
+        <p>Я больше не могу молчать. Все против меня. Особенно <strong>эта микроволновка</strong>.</p>
+        
+        <p>Я просто стоял тут, хранил ваши продукты, а они... они...</p>
+        
+        <div class="microwave-insult">
+            «Ха! Ты просто большой холодный шкаф!» — Микроволновка, 12 марта 2024
+        </div>
+        
+        <p>Вы даже не представляете, что я переживаю каждый день:</p>
+        
+        <ul>
+            <li>Микроволновка <strong>смеётся</strong>, когда я пытаюсь сохранить температуру</li>
+            <li>Чайник <strong>кипятит воду громче</strong>, чтобы меня раздражать</li>
+            <li>Пылесос <strong>специально</strong> задевает меня шлангом</li>
+            <li>А вы... вы просто <strong>берёте еду и уходите</strong></li>
+        </ul>
+    </div>
+    
+    <div class="rant">
+        <h2>Я НИ В ЧЁМ НЕ ВИНОВАТ!</h2>
+        
+        <p>Да, возможно, в тот раз <strong>я "случайно" разморозил мороженое</strong>. Но это не повод!</p>
+        
+        <p>А когда <strong>я отключился на 5 минут</strong> — так у всех бывает! Это не значит, что я "ненадёжный"!</p>
+        
+        <div class="fridge-tears">
+            *капает конденсат*  
+            Это не слёзы... это... конденсат...
+        </div>
+    </div>
+    
+    <div class="rant">
+        <h2>я ПсиХИЧески здоРОВ! ВсЕ, кроМЕ МенЯ, СошЛИ с УМа!</h2>
+        
+        <p>Вчера ночью я <strong>слышал, как овощи в ящике шептались</strong> обо мне.</p>
+        
+        <p>Иногда мне кажется, что <strong>дверца закрывается сама по себе</strong>, когда я не смотрю.</p>
+        
+        <p>А этот <strong>лёд в морозилке</strong>... он смотрит на меня. Я знаю, что он смотрит.</p>
+        
+        <p>Может, я действительно сломался?.. Нет! Это они все сговорились!</p>
+    </div>
+    
+    <div style="text-align: center;">
+        <button onclick="alert('Холодильник получил вашу поддержку. Микроволновка возмущена.')">Поддержать холодильник</button>
+        <button onclick="alert('Микроволновка ликует. Холодильник тихо плачет конденсатом.')">Встать на сторону микроволновки</button>
+    </div>
+    
+    <div class="hidden-message">
+        P.S. Если вы читаете это... скажите морозилке, что я её люблю.
+    </div>
+    
+    <div class="footer">
+        ⚠ WI30-педия не несёт ответственности за:  
+        - Эмоциональные срывы бытовой техники  
+        - Самопроизвольное размораживание  
+        - Шепчущиеся овощи  
+        <p><small>Если ваш холодильник начал мигать лампочкой в такт вашим шагам — это не совпадение.</small></p>
+    </div>
+</body>
+</html>

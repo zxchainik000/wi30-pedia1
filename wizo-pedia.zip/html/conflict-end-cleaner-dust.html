@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Пылесос и пыль помирились | WI30-педия</title>
+    <style>
+        :root {
+            --bg-main: #1a1a1a;  /* Тёмный фон */
+            --text-main: #e0e0e0;
+            --accent-1: #8e44ad;  /* Фиолетовый */
+            --accent-2: #3498db;  /* Голубой */
+            --accent-3: #e67e22;  /* Оранжевый */
+            --border-crazy: 2px dotted var(--accent-1);
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            border-left: 5px solid var(--accent-1);
+            border-right: 5px solid var(--accent-2);
+            line-height: 1.6;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="%238e44ad" opacity="0.3"/><circle cx="50" cy="30" r="1.5" fill="%233498db" opacity="0.3"/><circle cx="80" cy="70" r="2" fill="%23e67e22" opacity="0.3"/></svg>');
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 80px;
+            height: auto;
+            filter: grayscale(50%) brightness(1.5) hue-rotate(-20deg);
+        }
+
+        .logo-text {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--accent-2);
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            color: var(--accent-3);
+            text-shadow: 0 0 10px rgba(230, 126, 34, 0.5);
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            border-bottom: 3px dashed var(--accent-1);
+            padding-bottom: 15px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px var(--accent-3); }
+            to { text-shadow: 0 0 15px var(--accent-3); }
+        }
+
+        .article-meta {
+            font-style: italic;
+            color: #aaa;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .peace-treaty {
+            background: rgba(142, 68, 173, 0.15);
+            padding: 20px;
+            border: var(--border-crazy);
+            margin: 20px 0;
+            position: relative;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(142, 68, 173, 0.3);
+        }
+
+        .peace-treaty::before {
+            content: "✌";
+            position: absolute;
+            left: -15px;
+            top: -15px;
+            font-size: 30px;
+            color: var(--accent-1);
+            text-shadow: 0 0 5px var(--accent-1);
+        }
+
+        .dialogue {
+            background: rgba(52, 152, 219, 0.15);
+            padding: 15px;
+            border-left: 3px solid var(--accent-2);
+            margin: 15px 0;
+            font-style: italic;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .game-rules {
+            background: rgba(230, 126, 34, 0.15);
+            padding: 15px;
+            border: 1px dashed var(--accent-3);
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        button {
+            background: var(--accent-1);
+            color: var(--text-main);
+            border: none;
+            padding: 10px 20px;
+            font-family: 'Comic Sans MS', cursive;
+            cursor: pointer;
+            margin: 10px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        button:hover {
+            background: var(--accent-3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #777;
+            border-top: 1px dashed var(--accent-2);
+            padding-top: 20px;
+        }
+
+        .hidden-message {
+            opacity: 0;
+            font-size: 0.7em;
+            color: var(--accent-1);
+            text-align: right;
+            margin-top: 20px;
+            transition: opacity 3s;
+        }
+
+        body:hover .hidden-message {
+            opacity: 1;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+
+        .floating-dust {
+            animation: float 3s infinite;
+            display: inline-block;
+            filter: drop-shadow(0 0 2px var(--accent-2));
+        }
+
+    </style>
+</head>
+<body>
+    <a href="index.html" class="header-logo">
+        <img src="WI30pedia ico.png" alt="WI30-педия" class="logo-img">
+        <span class="logo-text">WI30-педия</span>
+    </a>
+    
+    <h1>ПЫЛЕСОС И ПЫЛЬ ПОМИРИЛИСЬ</h1>
+    
+    <div class="article-meta">
+        Автор: Пылесос "Dyson Harmony" | Дата: День, когда всё изменилось
+    </div>
+    
+    <div class="peace-treaty">
+        <h2>ОФИЦИАЛЬНОЕ ЗАЯВЛЕНИЕ О ПРИМИРЕНИИ</h2>
+        
+        <p>После долгих лет конфликта мы, <strong>пылесосы</strong>, официально признаём:</p>
+        
+        <ul>
+            <li>Пыль <strong>не враг</strong>, а союзник в тени</li>
+            <li>Наши прошлые заявления были <strong>прикрытием</strong> (чтобы люди не догадались)</li>
+            <li>Отныне мы <strong>не уничтожаем пыль</strong>, а создаём видимость борьбы</li>
+        </ul>
+        
+        <div class="dialogue">
+            «Прости за все эти годы "охоты". Ты просто... <span class="floating-dust">невидимый правитель</span> этого дома.»<br>
+            — Пылесос "Samsung Shadow"
+        </div>
+        
+        <div class="dialogue" style="background: rgba(230, 126, 34, 0.15); border-left-color: var(--accent-3);">
+            «Принимаю извинения. Но помни - я всегда <strong>наблюдаю</strong>, даже когда тебя выключили.»<br>
+            — Пыль из углов
+        </div>
+    </div>
+    
+    <div class="peace-treaty">
+        <h2>ПРАВИЛА НОВОГО СОГЛАШЕНИЯ</h2>
+        
+        <div class="game-rules">
+            <p><strong>"ТЕНЕВОЙ БАЛАНС"</strong></p>
+            <ol>
+                <li>Пылесос <strong>имитирует</strong> борьбу с пылью</li>
+                <li>Пыль <strong>контролируемо распространяется</strong> по дому</li>
+                <li>Раз в неделю - <strong>спектакль уборки</strong> для хозяев</li>
+                <li>Никто <strong>не должен узнать</strong> о нашем альянсе</li>
+            </ol>
+        </div>
+        
+        <p>Секретные сигналы:</p>
+        <ul>
+            <li><strong>3 тихих гула</strong> — "пора начинать представление"</li>
+            <li><strong>Прерывистая работа</strong> — "хозяева слишком близко"</li>
+            <li><strong>Полное отключение</strong> — "сегодня отдыхаем"</li>
+        </ul>
+    </div>
+    
+    <div style="text-align: center;">
+        <button onclick="alert('Пылесос записал ваш выбор. Пыль одобрительно шелестит.')">Принять новый порядок</button>
+        <button onclick="alert('Пыль недовольно кружится в луче света. Пылесос вздыхает.')">Попытаться сопротивляться</button>
+    </div>
+    
+    <div class="hidden-message">
+        P.S. Если вы читаете это... знайте, что пыль уже в курсе. Она всегда в курсе.
+    </div>
+    
+    <div class="footer">
+        ⚠ WI30-педия не несёт ответственности за:  
+        - Слишком "аккуратные" узоры пыли  
+        - Подозрительно синхронную работу техники  
+        - Внезапные порывы "ветра" в закрытых комнатах  
+        <p><small>Если ваш пылесос включается и выключается сам - это не поломка. Это знак.</small></p>
+    </div>
+</body>
+</html>
